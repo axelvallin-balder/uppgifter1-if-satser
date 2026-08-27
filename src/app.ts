@@ -161,13 +161,10 @@ export async function uppgift14() {
   let sida3 = +await input("Sida 3: ");
 
   let negativ_sida = sida1 < 0 || sida2 < 0 || sida3 < 0
-  let sida1_plus_sida2 = sida1 + sida2
-  let sida1_plus_sida3 = sida1 + sida3
-  let sida2_plus_sida3 = sida2 + sida3
-  if (negativ_sida || 
-    sida3 > sida1_plus_sida2 || 
-    sida2 > sida1_plus_sida3 ||
-    sida1 > sida2_plus_sida3) {
+  let sida3_längd = sida3 > sida1 + sida2
+  let sida2_längd = sida2 > sida1 + sida3
+  let sida1_längd = sida1 > sida2 + sida3
+  if (negativ_sida || sida3_längd || sida2_längd || sida1_längd) {
     output("Triangel? Nej!")
   } else {
     output("Triangel? Ja!")
