@@ -221,9 +221,20 @@ Detta program ska kunna avgöra om ett inmatat tecken är en liten bokstav, stor
 Tecken: B
 Stor bokstav
 ```
+Tips:  
+Sök efter ascii-tabellen online och ta reda på vilka "koder" som hör till stora bokstäver. Använd följande exempel för att ta reda på koden för ett visst tecken.
+```
+let character = "a"
+
+//character_code blir en siffra, specifikt 97 enligt ascii-tabellen
+let character_code = character.charCodeAt(0)
+
+//här hämtas tecknet som har koden character_code+1, alltså 98. 98 motsvarar b.
+let character_2 = String.fromCharCode(character_code+1)
+```
 
 ### Uppgift 13
-Detta program ska kunna avgöra om ett inmatat tecken är en liten bokstav, stor bokstav eller annat tecken. Det räcker om det fungerar för tecken i det engelska alfabetet (A-Z).
+Skriv ett program som läser in ett tal mellan -999 och 999. Programmet ska sedan skriva ut hut många siffror som finns i talet och om det är positivt eller negativt.
 
 ```
 Mata in ett tal mellan -999 och 999: 32
